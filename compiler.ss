@@ -3682,14 +3682,14 @@
   expose-basic-blocks
   optimize-jumps
   flatten-program
-  analyze-code-size ;;;
-;  generate-x86-64  ;; turn it on only on 64-bit machines
+;  analyze-code-size ;;;
+  generate-x86-64  ;; turn it on only on 64-bit machines
 ))
 
-
 (load "tests.ss")
-(tracer #f)
-(test-all)
+(tracer #t)
+(trusted-passes #t)
+;;(test-all)
 
 ;; (test-all-analyze)
 ;; (test-one (nth 107 tests))
